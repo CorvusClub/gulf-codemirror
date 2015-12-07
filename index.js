@@ -23,6 +23,7 @@ module.exports = function(cm, storageAdapter) {
     , oldval
   
   doc.codemirror = cm
+  oldval = cm.getValue();
 
   doc._setContents = function(newcontent, cb) {
     cm.setValue(oldval = newcontent)
